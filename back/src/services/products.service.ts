@@ -5,7 +5,7 @@ export const checkProductExists = async (itemId: number): Promise<boolean> => {
   const item: Product | null = await ProductRepository.findOneBy({
     id: itemId,
   });
-  return !!item;
+  return !!item;  
 };
 
 export const getProductsService = async (): Promise<Product[]> => {
